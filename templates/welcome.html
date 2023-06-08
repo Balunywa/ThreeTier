@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Welcome to D and L's Home Page
+{% endblock %}
+
+{% block heading %}
+Welcome to D and L's Home Page
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone"><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if message %}
+    <p>{{message}}</p>
+    <p>Name: {{name}}</p>
+    <p>Phone: {{phone}}</p>
+    <p>Email: {{email}}</p>
+{% endif %}
+{% endblock %}
+

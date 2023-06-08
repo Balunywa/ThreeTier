@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+D and L's Home
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">D and L's Home </h1>
+        <p class="lead">Welcome to our little corner on Earth. Kick off your shoes and stay a while!</p>
+        {% if session['name'] %}
+            <p class="lead">Welcome, {{ session['name'] }}! It's great to see you.</p>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section>
+    <div class="container">
+        <h2>Welcome to our home </h2>
+        <p>We are delighted to have you here! Feel free to explore and connect with us. We appreciate both new and returning visitors.</p>
+    </div>
+</section>
+<!-- Visitors Section -->
+<section class="mt-4">
+    <div class="container">
+        <h2>Visitors</h2>
+        <div class="row">
+            <!-- New Visitors -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">New Visitors</h5>
+                        <p class="card-text">Welcome to our new visitors. We're glad you found us. Have a look around!</p>
+                        <!-- Add a link to the 'visitor' page -->
+                        <a href="{{ url_for('visitor') }}" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Returning Visitors -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">All Visitors</h5>
+                        <p class="card-text">Welcome back! It's good to see you again. Check out what's new since your last visit.</p>
+                        <!-- Add a link to the 'visitor' page -->
+                        <a href="{{ url_for('all_visitors') }}" class="btn btn-primary">Previous Vists</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+

@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from config import conn_str
-from modules import Visitor  # Assuming Visitor model is in the modules
+from modles import Visitor  # Assuming Visitor model is in the modules
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import urllib.parse

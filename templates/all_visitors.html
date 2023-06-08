@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All Visitors
+{% endblock %}
+
+{% block content %}
+<h2>All Visitors</h2>
+{% for visitor in visitors %}
+<p>{{ visitor.name }} visited on {{ visitor.visit_date }}</p>
+{% endfor %}
+{% endblock %}
